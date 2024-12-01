@@ -30,7 +30,7 @@ void main() {
 
   const order1 = ['margherita', 'pepperoni', 'pineapple'];
   const order2 = ['vegetarian', 'margherita'];
-  const order3 = ['margherita', 'pepporoni'];
+  const order3 = ['margherita', 'pepperoni'];
 
   final total1 = calculateTotal(pizzaPrice, order1);
   final total2 = calculateTotal(pizzaPrice, order2);
@@ -42,16 +42,16 @@ void main() {
 }
 
 double calculate(Map<String, double> pp, List<String> order) {
-  double total1 = 0.0;
+  double total = 0.0;
   for (var item in order) {
     final price = pp[item];
     if (price != null) {
-      total1 += price;
+      total += price;
     } else {
       print('$item, Item not found in the menu');
     }
   }
-  return total1;
+  return total;
 }
 
 double calculateTotal(Map<String, double> prices, List<String> order) {
