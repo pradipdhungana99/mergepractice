@@ -41,23 +41,10 @@ void main() {
   print('Total for order 3: \$$total3');
 }
 
-double calculate(Map<String, double> pp, List<String> order) {
+double calculateTotal(Map<String, double> pp, List<String> order) {
   double total = 0.0;
   for (var item in order) {
     final price = pp[item];
-    if (price != null) {
-      total += price;
-    } else {
-      print('$item, Item not found in the menu');
-    }
-  }
-  return total;
-}
-
-double calculateTotal(Map<String, double> prices, List<String> order) {
-  double total = 0.0;
-  for (var item in order) {
-    final price = prices[item];
     if (price != null) {
       total += price;
     } else {
